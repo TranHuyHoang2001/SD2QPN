@@ -1,0 +1,1420 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="ProjectInfo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="LogicalView"/>
+              <xs:element name="ProjectOptions">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="DiagramOptions">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="DefaultHtmlDocFont">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute type="xs:string" name="Family"/>
+                                  <xs:attribute type="xs:byte" name="Size"/>
+                                  <xs:attribute type="xs:byte" name="Style"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="ActivityDiagramControlFlowDisplayOption"/>
+                        <xs:attribute type="xs:string" name="ActivityDiagramShowActionCallBehaviorOption"/>
+                        <xs:attribute type="xs:string" name="ActivityDiagramShowActivityEdgeWeight"/>
+                        <xs:attribute type="xs:string" name="ActivityDiagramShowObjectNodeType"/>
+                        <xs:attribute type="xs:string" name="ActivityDiagramShowPartitionHandle"/>
+                        <xs:attribute type="xs:string" name="AddDataStoresExtEntitiesToDecomposedDFD"/>
+                        <xs:attribute type="xs:string" name="AlignColumnProperties"/>
+                        <xs:attribute type="xs:string" name="AllowConfigShowInOutFlowButtonsInDataFlowDiagram"/>
+                        <xs:attribute type="xs:string" name="AutoGenerateRoleName"/>
+                        <xs:attribute type="xs:string" name="AutoSetAttributeType"/>
+                        <xs:attribute type="xs:string" name="AutoSetColumnType"/>
+                        <xs:attribute type="xs:string" name="AutoSyncRoleName"/>
+                        <xs:attribute type="xs:string" name="BpdAutoStretchPools"/>
+                        <xs:attribute type="xs:string" name="BpdConnectGatewayWithFlowObjectInDifferentPool"/>
+                        <xs:attribute type="xs:string" name="BpdDefaultConnectionPointStyle"/>
+                        <xs:attribute type="xs:string" name="BpdDefaultConnectorStyle"/>
+                        <xs:attribute type="xs:string" name="BpdDhowIdOption"/>
+                        <xs:attribute type="xs:string" name="BpdShowActivitiesTypeIcon"/>
+                        <xs:attribute type="xs:string" name="BusinessProcessDiagramDefaultLanguage"/>
+                        <xs:attribute type="xs:string" name="ClassVisibilityStyle"/>
+                        <xs:attribute type="xs:string" name="ConnectorLabelOrientation"/>
+                        <xs:attribute type="xs:string" name="CreateOneMessagePerDirection"/>
+                        <xs:attribute type="xs:string" name="DecisionMergeNodeConnectionPointStyle"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationEndNavigable"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationEndVisibility"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowFromMultiplicity"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowFromRoleName"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowFromRoleVisibility"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowStereotypes"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowToMultiplicity"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowToRoleName"/>
+                        <xs:attribute type="xs:string" name="DefaultAssociationShowToRoleVisibility"/>
+                        <xs:attribute type="xs:string" name="DefaultAttributeMultiplicity"/>
+                        <xs:attribute type="xs:string" name="DefaultAttributeType"/>
+                        <xs:attribute type="xs:string" name="DefaultAttributeVisibility"/>
+                        <xs:attribute type="xs:string" name="DefaultClassAttributeMultiplicity"/>
+                        <xs:attribute type="xs:string" name="DefaultClassAttributeMultiplicityOrdered"/>
+                        <xs:attribute type="xs:string" name="DefaultClassAttributeMultiplicityUnique"/>
+                        <xs:attribute type="xs:string" name="DefaultClassInterfaceBall"/>
+                        <xs:attribute type="xs:string" name="DefaultClassVisibility"/>
+                        <xs:attribute type="xs:string" name="DefaultColumnType"/>
+                        <xs:attribute type="xs:string" name="DefaultConnectionPointStyle"/>
+                        <xs:attribute type="xs:string" name="DefaultConnectorStyle"/>
+                        <xs:attribute type="xs:string" name="DefaultDiagramBackground"/>
+                        <xs:attribute type="xs:string" name="DefaultDisplayAsRobustnessAnalysisIcon"/>
+                        <xs:attribute type="xs:string" name="DefaultDisplayAsRobustnessAnalysisIconInSequenceDiagram"/>
+                        <xs:attribute type="xs:string" name="DefaultDisplayAsStereotypeIcon"/>
+                        <xs:attribute type="xs:string" name="DefaultFontColor"/>
+                        <xs:attribute type="xs:string" name="DefaultGenDiagramTypeFromScenario"/>
+                        <xs:attribute type="xs:string" name="DefaultHtmlDocFontColor"/>
+                        <xs:attribute type="xs:string" name="DefaultLineJumps"/>
+                        <xs:attribute type="xs:string" name="DefaultOperationVisibility"/>
+                        <xs:attribute type="xs:string" name="DefaultParameterDirection"/>
+                        <xs:attribute type="xs:string" name="DefaultShowAttributeInitialValue"/>
+                        <xs:attribute type="xs:string" name="DefaultShowAttributeOption"/>
+                        <xs:attribute type="xs:string" name="DefaultShowClassMemberStereotype"/>
+                        <xs:attribute type="xs:string" name="DefaultShowDirection"/>
+                        <xs:attribute type="xs:string" name="DefaultShowMultiplicityConstraints"/>
+                        <xs:attribute type="xs:string" name="DefaultShowOperationOption"/>
+                        <xs:attribute type="xs:string" name="DefaultShowOperationSignature"/>
+                        <xs:attribute type="xs:string" name="DefaultShowOrderedMultiplicityConstraint"/>
+                        <xs:attribute type="xs:string" name="DefaultShowOwnedAssociationEndAsAttribute"/>
+                        <xs:attribute type="xs:string" name="DefaultShowOwner"/>
+                        <xs:attribute type="xs:string" name="DefaultShowOwnerSkipModelInFullyQualifiedOwnerSignature"/>
+                        <xs:attribute type="xs:string" name="DefaultShowTemplateParameter"/>
+                        <xs:attribute type="xs:string" name="DefaultShowTypeOption"/>
+                        <xs:attribute type="xs:string" name="DefaultShowUniqueMultiplicityConstraint"/>
+                        <xs:attribute type="xs:string" name="DefaultTypeOfSubProcess"/>
+                        <xs:attribute type="xs:string" name="DefaultWrapClassMember"/>
+                        <xs:attribute type="xs:string" name="DrawTextAnnotationOpenRectangleFollowConnectorEnd"/>
+                        <xs:attribute type="xs:string" name="EnableMinimumSize"/>
+                        <xs:attribute type="xs:string" name="EntityColumnConstraintsPresentation"/>
+                        <xs:attribute type="xs:byte" name="ErdIndexNumOfDigits"/>
+                        <xs:attribute type="xs:string" name="ErdIndexPattern"/>
+                        <xs:attribute type="xs:string" name="ErdIndexPatternSyncAutomatically"/>
+                        <xs:attribute type="xs:string" name="ErdManyToManyJoinTableDelimiter"/>
+                        <xs:attribute type="xs:byte" name="EtlTableDiagramFontSize"/>
+                        <xs:attribute type="xs:string" name="ExpandedSubProcessDiagramContent"/>
+                        <xs:attribute type="xs:string" name="ForeignKeyArrowHeadSize"/>
+                        <xs:attribute type="xs:string" name="ForeignKeyConnectorEndPointAssociatedColumn"/>
+                        <xs:attribute type="xs:string" name="ForeignKeyNamePattern"/>
+                        <xs:attribute type="xs:byte" name="ForeignKeyNamePatternCaseHandling"/>
+                        <xs:attribute type="xs:string" name="ForeignKeyRelationshipPattern"/>
+                        <xs:attribute type="xs:string" name="FractionalMetrics"/>
+                        <xs:attribute type="xs:string" name="GeneralizationSetNotation"/>
+                        <xs:attribute type="xs:string" name="GraphicAntiAliasing"/>
+                        <xs:attribute type="xs:byte" name="GridDiagramFontSize"/>
+                        <xs:attribute type="xs:string" name="LineJumpSize"/>
+                        <xs:attribute type="xs:string" name="ModelElementNameAlignment"/>
+                        <xs:attribute type="xs:string" name="MultipleLineClassName"/>
+                        <xs:attribute type="xs:string" name="PaintConnectorThroughLabel"/>
+                        <xs:attribute type="xs:string" name="PointConnectorEndToCompartmentMember"/>
+                        <xs:attribute type="xs:string" name="PrimaryKeyConstraintPattern"/>
+                        <xs:attribute type="xs:string" name="PrimaryKeyNamePattern"/>
+                        <xs:attribute type="xs:string" name="RenameConstructorAfterRenameClass"/>
+                        <xs:attribute type="xs:string" name="RenameExtensionPointToFollowExtendUseCase"/>
+                        <xs:attribute type="xs:string" name="ShapeAutoFitSize"/>
+                        <xs:attribute type="xs:string" name="ShowActivationsInSequenceDiagram"/>
+                        <xs:attribute type="xs:int" name="ShowActivityStateNodeCaption"/>
+                        <xs:attribute type="xs:string" name="ShowArtifactOption"/>
+                        <xs:attribute type="xs:string" name="ShowAssociatedDiagramNameOfInteraction"/>
+                        <xs:attribute type="xs:string" name="ShowAssociationRoleStereotypes"/>
+                        <xs:attribute type="xs:string" name="ShowAttributeGetterSetter"/>
+                        <xs:attribute type="xs:string" name="ShowClassEmptyCompartments"/>
+                        <xs:attribute type="xs:string" name="ShowColumnNullable"/>
+                        <xs:attribute type="xs:string" name="ShowColumnType"/>
+                        <xs:attribute type="xs:string" name="ShowColumnUniqueConstraintName"/>
+                        <xs:attribute type="xs:string" name="ShowComponentOption"/>
+                        <xs:attribute type="xs:string" name="ShowExtraColumnProperties"/>
+                        <xs:attribute type="xs:string" name="ShowInOutFlowButtonsInDataFlowDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowInOutFlowsInSubLevelDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowMessageOperationSignatureForSequenceAndCommunicationDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowMessageStereotypeInSequenceAndCommunicationDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowNumberInCollaborationDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowNumberInSequenceDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowPackageNameStyle"/>
+                        <xs:attribute type="xs:string" name="ShowParameterNameInOperationSignature"/>
+                        <xs:attribute type="xs:string" name="ShowRowGridLineWithinCompClassDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowRowGridLineWithinCompERD"/>
+                        <xs:attribute type="xs:string" name="ShowRowGridLineWithinORMDiagram"/>
+                        <xs:attribute type="xs:string" name="ShowSchemaNameInERD"/>
+                        <xs:attribute type="xs:string" name="ShowTransitionTrigger"/>
+                        <xs:attribute type="xs:string" name="ShowUseCaseExtensionPoint"/>
+                        <xs:attribute type="xs:string" name="ShowUseCaseID"/>
+                        <xs:attribute type="xs:string" name="StateShowParametersOfInternalActivities"/>
+                        <xs:attribute type="xs:string" name="StateShowPrePostConditionAndBodyOfInternalActivities"/>
+                        <xs:attribute type="xs:string" name="StopTargetLifelineOnCreateDestroyMessage"/>
+                        <xs:attribute type="xs:string" name="SupportHtmlTaggedValue"/>
+                        <xs:attribute type="xs:string" name="SupportMultipleLineAttribute"/>
+                        <xs:attribute type="xs:string" name="SuppressImpliedMultiplicityForAttributeAssociationEnd"/>
+                        <xs:attribute type="xs:string" name="SyncAssociationNameWithAssociationClass"/>
+                        <xs:attribute type="xs:string" name="SyncAssociationRoleNameWithReferencedAttributeName"/>
+                        <xs:attribute type="xs:string" name="SyncDocOfInterfaceToSubClass"/>
+                        <xs:attribute type="xs:string" name="TextAntiAliasing"/>
+                        <xs:attribute type="xs:string" name="TextualAnalysisGenerateRequirementTextOption"/>
+                        <xs:attribute type="xs:string" name="TextualAnalysisHighlightOption"/>
+                        <xs:attribute type="xs:string" name="UnnamedIndexPattern"/>
+                        <xs:attribute type="xs:string" name="UseStateNameTab"/>
+                        <xs:attribute type="xs:string" name="WireflowDiagramShowActiveFlowLabel"/>
+                        <xs:attribute type="xs:byte" name="WireflowDiagramTheme"/>
+                        <xs:attribute type="xs:string" name="WireflowDiagramWireflowShowPreview"/>
+                        <xs:attribute type="xs:string" name="WireflowDiagramWireflowShowScreenId"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="GeneralOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="ConfirmSubLevelIdWithDot"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="InstantReverseOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="CalculateGeneralizationAndRealization"/>
+                            <xs:attribute type="xs:string" name="CreateShapeForParentModelOfDraggedClassPackage"/>
+                            <xs:attribute type="xs:string" name="ReverseGetterSetter"/>
+                            <xs:attribute type="xs:string" name="ReverseOperationImplementation"/>
+                            <xs:attribute type="xs:string" name="ShowPackageForNewDiagram"/>
+                            <xs:attribute type="xs:string" name="ShowPackageOwner"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ModelQualityOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="EnableModelQualityChecking"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ORMOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:byte" name="DecimalPrecision"/>
+                            <xs:attribute type="xs:byte" name="DecimalScale"/>
+                            <xs:attribute type="xs:string" name="ExportCommentToDatabase"/>
+                            <xs:attribute type="xs:string" name="FormattedSQL"/>
+                            <xs:attribute type="xs:string" name="GenerateAssociationWithAttribute"/>
+                            <xs:attribute type="xs:string" name="GenerateDiagramFromORMWizards"/>
+                            <xs:attribute type="xs:string" name="GetterSetterVisibility"/>
+                            <xs:attribute type="xs:string" name="IdGeneratorType"/>
+                            <xs:attribute type="xs:string" name="MappingFileColumnOrder"/>
+                            <xs:attribute type="xs:string" name="NumericToClassType"/>
+                            <xs:attribute type="xs:string" name="QuoteSQLIdentifier"/>
+                            <xs:attribute type="xs:string" name="RecreateShapeWhenSync"/>
+                            <xs:attribute type="xs:string" name="SyncToClassDiagramAttributeName"/>
+                            <xs:attribute type="xs:string" name="SyncToClassDiagramAttributeNamePrefix"/>
+                            <xs:attribute type="xs:string" name="SyncToClassDiagramAttributeNameSuffix"/>
+                            <xs:attribute type="xs:string" name="SyncToClassDiagramClassName"/>
+                            <xs:attribute type="xs:string" name="SyncToClassDiagramClassNamePrefix"/>
+                            <xs:attribute type="xs:string" name="SyncToClassDiagramClassNameSuffix"/>
+                            <xs:attribute type="xs:string" name="SyncToERDColumnName"/>
+                            <xs:attribute type="xs:string" name="SyncToERDColumnNamePrefix"/>
+                            <xs:attribute type="xs:string" name="SyncToERDColumnNameSuffix"/>
+                            <xs:attribute type="xs:string" name="SyncToERDTableName"/>
+                            <xs:attribute type="xs:string" name="SyncToERDTableNamePrefix"/>
+                            <xs:attribute type="xs:string" name="SyncToERDTableNameSuffix"/>
+                            <xs:attribute type="xs:string" name="SynchronizeDefaultValueToColumn"/>
+                            <xs:attribute type="xs:string" name="SynchronizeName"/>
+                            <xs:attribute type="xs:string" name="TablePerSubclassFKMapping"/>
+                            <xs:attribute type="xs:string" name="UpperCaseSQL"/>
+                            <xs:attribute type="xs:string" name="UseDefaultDecimal"/>
+                            <xs:attribute type="xs:string" name="WrappingServletRequest"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="RequirementDiagramOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="DefaultWrapMember"/>
+                            <xs:attribute type="xs:string" name="ShowAttributes"/>
+                            <xs:attribute type="xs:string" name="SupportHTMLAttribute"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="StateCodeEngineOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="AutoCreateInitialStateInStateDiagram"/>
+                            <xs:attribute type="xs:string" name="AutoCreateTransitionMethods"/>
+                            <xs:attribute type="xs:byte" name="DefaultInitialStateLocationX"/>
+                            <xs:attribute type="xs:byte" name="DefaultInitialStateLocationY"/>
+                            <xs:attribute type="xs:string" name="GenerateDebugMessage"/>
+                            <xs:attribute type="xs:string" name="GenerateSample"/>
+                            <xs:attribute type="xs:string" name="GenerateTryCatch"/>
+                            <xs:attribute type="xs:string" name="Language"/>
+                            <xs:attribute type="xs:string" name="RegenerateTransitionMethods"/>
+                            <xs:attribute type="xs:string" name="SyncTransitionMethods"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="WarningOptions">
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute type="xs:string" name="CreateORMClassInDefaultPackage"/>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="PORepository">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="POUserIDFormats">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="POUserIDFormat" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="Digits" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Guid" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="LastNumericValue" use="optional"/>
+                                        <xs:attribute type="xs:string" name="ModelType" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Prefix" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Suffix" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Models">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DataType" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                      <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                      <xs:attribute type="xs:string" name="Id" use="optional"/>
+                      <xs:attribute type="xs:string" name="Name" use="optional"/>
+                      <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                      <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                      <xs:attribute type="xs:dateTime" name="PmLastModified" use="optional"/>
+                      <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                      <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Frame">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ModelChildren">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="InteractionLifeLine" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="Activations" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Activation" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="MasterView">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Activation">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                          <xs:attribute type="xs:string" name="OverlappingExecutionOccurrence" use="optional"/>
+                                          <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="MasterView">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="InteractionLifeLine">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Active" use="optional"/>
+                              <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                              <xs:attribute type="xs:string" name="Class" use="optional"/>
+                              <xs:attribute type="xs:string" name="ClassLevelStereotype" use="optional"/>
+                              <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="MultiObject" use="optional"/>
+                              <xs:attribute type="xs:string" name="Multiplicity" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                              <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                              <xs:attribute type="xs:dateTime" name="PmLastModified" use="optional"/>
+                              <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                              <xs:attribute type="xs:string" name="Stopped" use="optional"/>
+                              <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="CombinedFragment" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="CoveredLifeLines" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="InteractionLifeLine" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="MasterView">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="CombinedFragment">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="ModelChildren">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="InteractionOperand" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="Messages" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Message" maxOccurs="unbounded" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="Guard">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="InteractionConstraint">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Constraint" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="MasterView">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="InteractionOperand">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                          <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                                          <xs:attribute type="xs:dateTime" name="PmLastModified" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                              <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="OperatorKind" use="optional"/>
+                              <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                              <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                              <xs:attribute type="xs:dateTime" name="PmLastModified" use="optional"/>
+                              <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                              <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                  <xs:attribute type="xs:byte" name="BaseY"/>
+                  <xs:attribute type="xs:string" name="Documentation_plain"/>
+                  <xs:attribute type="xs:string" name="Id"/>
+                  <xs:attribute type="xs:string" name="Name"/>
+                  <xs:attribute type="xs:string" name="PmAuthor"/>
+                  <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                  <xs:attribute type="xs:dateTime" name="PmLastModified"/>
+                  <xs:attribute type="xs:byte" name="QualityScore"/>
+                  <xs:attribute type="xs:string" name="Type"/>
+                  <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="ModelRelationshipContainer">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="ModelChildren">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ModelRelationshipContainer">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ModelChildren">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Message" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="ActionType" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="ActionTypeSend" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Asynchronous"/>
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain"/>
+                                                          <xs:attribute type="xs:string" name="Id"/>
+                                                          <xs:attribute type="xs:string" name="Iteration"/>
+                                                          <xs:attribute type="xs:string" name="Name"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="ActionTypeReturn" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Asynchronous"/>
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain"/>
+                                                          <xs:attribute type="xs:string" name="Id"/>
+                                                          <xs:attribute type="xs:string" name="Iteration"/>
+                                                          <xs:attribute type="xs:string" name="Name"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="ActionTypeDestroy" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Asynchronous"/>
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain"/>
+                                                          <xs:attribute type="xs:string" name="Id"/>
+                                                          <xs:attribute type="xs:string" name="Iteration"/>
+                                                          <xs:attribute type="xs:string" name="Name"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                  <xs:element name="ActionTypeCall" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Asynchronous"/>
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain"/>
+                                                          <xs:attribute type="xs:string" name="Id"/>
+                                                          <xs:attribute type="xs:string" name="Iteration"/>
+                                                          <xs:attribute type="xs:string" name="Name"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="FromEnd">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="MessageEnd">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="EndModelElement" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="ToEnd">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="MessageEnd">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="EndModelElement" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                            <xs:element name="MasterView">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="Message">
+                                                    <xs:complexType>
+                                                      <xs:simpleContent>
+                                                        <xs:extension base="xs:string">
+                                                          <xs:attribute type="xs:string" name="Idref" use="optional"/>
+                                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                                        </xs:extension>
+                                                      </xs:simpleContent>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="Asynchronous" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="BacklogActivityId" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Documentation_plain" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="DurationHeight" use="optional"/>
+                                          <xs:attribute type="xs:string" name="EndRelationshipFromMetaModelElement" use="optional"/>
+                                          <xs:attribute type="xs:string" name="EndRelationshipToMetaModelElement" use="optional"/>
+                                          <xs:attribute type="xs:string" name="FromActivation" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Id" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                          <xs:attribute type="xs:string" name="PmAuthor" use="optional"/>
+                                          <xs:attribute type="xs:dateTime" name="PmCreateDateTime" use="optional"/>
+                                          <xs:attribute type="xs:dateTime" name="PmLastModified" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="QualityScore" use="optional"/>
+                                          <xs:attribute type="xs:string" name="ReturnMessage" use="optional"/>
+                                          <xs:attribute type="xs:string" name="SequenceNumber" use="optional"/>
+                                          <xs:attribute type="xs:string" name="ToActivation" use="optional"/>
+                                          <xs:attribute type="xs:string" name="Type" use="optional"/>
+                                          <xs:attribute type="xs:byte" name="UserIDLastNumericValue" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                              <xs:attribute type="xs:string" name="Documentation_plain"/>
+                              <xs:attribute type="xs:string" name="Id"/>
+                              <xs:attribute type="xs:string" name="Name"/>
+                              <xs:attribute type="xs:string" name="PmAuthor"/>
+                              <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                              <xs:attribute type="xs:dateTime" name="PmLastModified"/>
+                              <xs:attribute type="xs:byte" name="QualityScore"/>
+                              <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:byte" name="BacklogActivityId"/>
+                  <xs:attribute type="xs:string" name="Documentation_plain"/>
+                  <xs:attribute type="xs:string" name="Id"/>
+                  <xs:attribute type="xs:string" name="Name"/>
+                  <xs:attribute type="xs:string" name="PmAuthor"/>
+                  <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                  <xs:attribute type="xs:dateTime" name="PmLastModified"/>
+                  <xs:attribute type="xs:byte" name="QualityScore"/>
+                  <xs:attribute type="xs:byte" name="UserIDLastNumericValue"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Diagrams">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InteractionDiagram">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Shapes">
+                      <xs:complexType>
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                          <xs:element name="InteractionOperand" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ElementFont">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Size" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Line">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Stroke"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="Cap" use="optional"/>
+                                    <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                    <xs:attribute type="xs:float" name="Weight" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Caption">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="Height" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalHeight" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalWidth" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Side" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Visible" use="optional"/>
+                                        <xs:attribute type="xs:short" name="Width" use="optional"/>
+                                        <xs:attribute type="xs:short" name="X" use="optional"/>
+                                        <xs:attribute type="xs:short" name="Y" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="FillColor">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Background" use="optional"/>
+                              <xs:attribute type="xs:string" name="ConnectToPoint" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ConnectionPointType" use="optional"/>
+                              <xs:attribute type="xs:string" name="Foreground" use="optional"/>
+                              <xs:attribute type="xs:short" name="Height" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="MetaModelElement" use="optional"/>
+                              <xs:attribute type="xs:string" name="Model" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ModelElementNameAlignment" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="OverrideAppearanceWithStereotypeIcon" use="optional"/>
+                              <xs:attribute type="xs:float" name="ParentConnectorDTheta" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorHeaderLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorLineLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PresentationOption" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PrimitiveShapeType" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestDefaultSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSizeFromCenter" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaption" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionFitWidth" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionSize" use="optional"/>
+                              <xs:attribute type="xs:byte" name="RequestSetSizeOption" use="optional"/>
+                              <xs:attribute type="xs:string" name="Selectable" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedFrom" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedTo" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowStereotypeIconName" use="optional"/>
+                              <xs:attribute type="xs:short" name="Width" use="optional"/>
+                              <xs:attribute type="xs:short" name="X" use="optional"/>
+                              <xs:attribute type="xs:short" name="Y" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ZOrder" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="Activation" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ElementFont">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Size" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Line">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Stroke"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="Cap" use="optional"/>
+                                    <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                    <xs:attribute type="xs:float" name="Weight" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Caption">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="Height" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalHeight" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalWidth" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Side" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Visible" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Width" use="optional"/>
+                                        <xs:attribute type="xs:short" name="X" use="optional"/>
+                                        <xs:attribute type="xs:short" name="Y" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="FillColor">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Background" use="optional"/>
+                              <xs:attribute type="xs:string" name="ConnectToPoint" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ConnectionPointType" use="optional"/>
+                              <xs:attribute type="xs:string" name="Foreground" use="optional"/>
+                              <xs:attribute type="xs:byte" name="Height" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="MetaModelElement" use="optional"/>
+                              <xs:attribute type="xs:string" name="Model" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ModelElementNameAlignment" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="OverrideAppearanceWithStereotypeIcon" use="optional"/>
+                              <xs:attribute type="xs:float" name="ParentConnectorDTheta" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorHeaderLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorLineLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PresentationOption" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PrimitiveShapeType" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestDefaultSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSizeFromCenter" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaption" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionFitWidth" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionSize" use="optional"/>
+                              <xs:attribute type="xs:byte" name="RequestSetSizeOption" use="optional"/>
+                              <xs:attribute type="xs:string" name="Selectable" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedFrom" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedTo" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowStereotypeIconName" use="optional"/>
+                              <xs:attribute type="xs:byte" name="Width" use="optional"/>
+                              <xs:attribute type="xs:short" name="X" use="optional"/>
+                              <xs:attribute type="xs:short" name="Y" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ZOrder" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="CombinedFragment" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ElementFont">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Size" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Line">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Stroke"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="Cap" use="optional"/>
+                                    <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                    <xs:attribute type="xs:float" name="Weight" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Caption">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="Height" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalHeight" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalWidth" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Side" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Visible" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Width" use="optional"/>
+                                        <xs:attribute type="xs:short" name="X" use="optional"/>
+                                        <xs:attribute type="xs:short" name="Y" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="FillColor">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Background" use="optional"/>
+                              <xs:attribute type="xs:string" name="ConnectToPoint" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ConnectionPointType" use="optional"/>
+                              <xs:attribute type="xs:string" name="Foreground" use="optional"/>
+                              <xs:attribute type="xs:short" name="Height" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="MetaModelElement" use="optional"/>
+                              <xs:attribute type="xs:string" name="Model" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ModelElementNameAlignment" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="OverrideAppearanceWithStereotypeIcon" use="optional"/>
+                              <xs:attribute type="xs:float" name="ParentConnectorDTheta" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorHeaderLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorLineLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PresentationOption" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PrimitiveShapeType" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestDefaultSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSizeFromCenter" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaption" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionFitWidth" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionSize" use="optional"/>
+                              <xs:attribute type="xs:byte" name="RequestSetSizeOption" use="optional"/>
+                              <xs:attribute type="xs:string" name="Selectable" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedFrom" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedTo" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowStereotypeIconName" use="optional"/>
+                              <xs:attribute type="xs:short" name="Width" use="optional"/>
+                              <xs:attribute type="xs:short" name="X" use="optional"/>
+                              <xs:attribute type="xs:short" name="Y" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ZOrder" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="LostFoundMessageEnd">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ElementFont">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color"/>
+                                        <xs:attribute type="xs:string" name="Name"/>
+                                        <xs:attribute type="xs:byte" name="Size"/>
+                                        <xs:attribute type="xs:byte" name="Style"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Line">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Stroke"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="Cap"/>
+                                    <xs:attribute type="xs:string" name="Color"/>
+                                    <xs:attribute type="xs:byte" name="Transparency"/>
+                                    <xs:attribute type="xs:float" name="Weight"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Caption">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="Height"/>
+                                        <xs:attribute type="xs:int" name="InternalHeight"/>
+                                        <xs:attribute type="xs:int" name="InternalWidth"/>
+                                        <xs:attribute type="xs:string" name="Side"/>
+                                        <xs:attribute type="xs:string" name="Visible"/>
+                                        <xs:attribute type="xs:byte" name="Width"/>
+                                        <xs:attribute type="xs:byte" name="X"/>
+                                        <xs:attribute type="xs:byte" name="Y"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="FillColor">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color"/>
+                                        <xs:attribute type="xs:byte" name="Style"/>
+                                        <xs:attribute type="xs:byte" name="Transparency"/>
+                                        <xs:attribute type="xs:byte" name="Type"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Background"/>
+                              <xs:attribute type="xs:string" name="ConnectToPoint"/>
+                              <xs:attribute type="xs:byte" name="ConnectionPointType"/>
+                              <xs:attribute type="xs:string" name="Foreground"/>
+                              <xs:attribute type="xs:byte" name="Height"/>
+                              <xs:attribute type="xs:string" name="Id"/>
+                              <xs:attribute type="xs:byte" name="ModelElementNameAlignment"/>
+                              <xs:attribute type="xs:string" name="OverrideAppearanceWithStereotypeIcon"/>
+                              <xs:attribute type="xs:float" name="ParentConnectorDTheta"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorHeaderLength"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorLineLength"/>
+                              <xs:attribute type="xs:byte" name="PresentationOption"/>
+                              <xs:attribute type="xs:byte" name="PrimitiveShapeType"/>
+                              <xs:attribute type="xs:string" name="RequestDefaultSize"/>
+                              <xs:attribute type="xs:string" name="RequestFitSize"/>
+                              <xs:attribute type="xs:string" name="RequestFitSizeFromCenter"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaption"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionFitWidth"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionSize"/>
+                              <xs:attribute type="xs:byte" name="RequestSetSizeOption"/>
+                              <xs:attribute type="xs:string" name="Selectable"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedFrom"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedTo"/>
+                              <xs:attribute type="xs:byte" name="ShowStereotypeIconName"/>
+                              <xs:attribute type="xs:byte" name="Width"/>
+                              <xs:attribute type="xs:short" name="X"/>
+                              <xs:attribute type="xs:short" name="Y"/>
+                              <xs:attribute type="xs:byte" name="ZOrder"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="InteractionLifeLine">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ElementFont">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Size" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Line">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Stroke"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="Cap" use="optional"/>
+                                    <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                    <xs:attribute type="xs:float" name="Weight" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Caption">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:short" name="Height" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalHeight" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalWidth" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Side" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Visible" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Width" use="optional"/>
+                                        <xs:attribute type="xs:short" name="X" use="optional"/>
+                                        <xs:attribute type="xs:short" name="Y" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="FillColor">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Type" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Background" use="optional"/>
+                              <xs:attribute type="xs:string" name="ConnectToPoint" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ConnectionPointType" use="optional"/>
+                              <xs:attribute type="xs:string" name="Foreground" use="optional"/>
+                              <xs:attribute type="xs:short" name="Height" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="MetaModelElement" use="optional"/>
+                              <xs:attribute type="xs:string" name="Model" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ModelElementNameAlignment" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:string" name="OverrideAppearanceWithStereotypeIcon" use="optional"/>
+                              <xs:attribute type="xs:float" name="ParentConnectorDTheta" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorHeaderLength" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ParentConnectorLineLength" use="optional"/>
+                              <xs:attribute type="xs:string" name="ParentFrame" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PresentationOption" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PrimitiveShapeType" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestDefaultSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestFitSizeFromCenter" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaption" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionFitWidth" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionSize" use="optional"/>
+                              <xs:attribute type="xs:byte" name="RequestSetSizeOption" use="optional"/>
+                              <xs:attribute type="xs:string" name="Selectable" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedFrom" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowAllocatedTo" use="optional"/>
+                              <xs:attribute type="xs:string" name="ShowClassifier" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowStereotypeIconName" use="optional"/>
+                              <xs:attribute type="xs:byte" name="Width" use="optional"/>
+                              <xs:attribute type="xs:short" name="X" use="optional"/>
+                              <xs:attribute type="xs:short" name="Y" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ZOrder" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:choice>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Connectors">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="Message" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="ElementFont">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Name" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Size" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Style" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Line">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="Stroke"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="Cap" use="optional"/>
+                                    <xs:attribute type="xs:string" name="Color" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="Transparency" use="optional"/>
+                                    <xs:attribute type="xs:float" name="Weight" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Caption">
+                                  <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <xs:attribute type="xs:byte" name="Height" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalHeight" use="optional"/>
+                                        <xs:attribute type="xs:int" name="InternalWidth" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Side" use="optional"/>
+                                        <xs:attribute type="xs:string" name="Visible" use="optional"/>
+                                        <xs:attribute type="xs:byte" name="Width" use="optional"/>
+                                        <xs:attribute type="xs:short" name="X" use="optional"/>
+                                        <xs:attribute type="xs:short" name="Y" use="optional"/>
+                                      </xs:extension>
+                                    </xs:simpleContent>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="Points">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="Point" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:simpleContent>
+                                            <xs:extension base="xs:string">
+                                              <xs:attribute type="xs:float" name="X" use="optional"/>
+                                              <xs:attribute type="xs:float" name="Y" use="optional"/>
+                                            </xs:extension>
+                                          </xs:simpleContent>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="Background" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ConnectorLabelOrientation" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ConnectorLineJumps" use="optional"/>
+                              <xs:attribute type="xs:string" name="ConnectorStyle" use="optional"/>
+                              <xs:attribute type="xs:string" name="Folded" use="optional"/>
+                              <xs:attribute type="xs:string" name="Foreground" use="optional"/>
+                              <xs:attribute type="xs:string" name="From" use="optional"/>
+                              <xs:attribute type="xs:byte" name="FromConnectType" use="optional"/>
+                              <xs:attribute type="xs:byte" name="FromPinType" use="optional"/>
+                              <xs:attribute type="xs:byte" name="FromShapeXDiff" use="optional"/>
+                              <xs:attribute type="xs:byte" name="FromShapeYDiff" use="optional"/>
+                              <xs:attribute type="xs:short" name="Height" use="optional"/>
+                              <xs:attribute type="xs:string" name="Id" use="optional"/>
+                              <xs:attribute type="xs:string" name="MetaModelElement" use="optional"/>
+                              <xs:attribute type="xs:string" name="Model" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ModelElementNameAlignment" use="optional"/>
+                              <xs:attribute type="xs:string" name="Name" use="optional"/>
+                              <xs:attribute type="xs:byte" name="PaintThroughLabel" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestRebuild" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestRebuildFromEnd" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestRebuildToEnd" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaption" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionFitWidth" use="optional"/>
+                              <xs:attribute type="xs:string" name="RequestResetCaptionSize" use="optional"/>
+                              <xs:attribute type="xs:string" name="Selectable" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowArgumentsInMessageOperationSignature" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowConnectorName" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowMessageName" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowMessageOperationSignature" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowParameterNamesInMessageOperationSignature" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ShowParameterTypesInMessageOperationSignature" use="optional"/>
+                              <xs:attribute type="xs:string" name="To" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ToConnectType" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ToPinType" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ToShapeXDiff" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ToShapeYDiff" use="optional"/>
+                              <xs:attribute type="xs:string" name="UseFromShapeCenter" use="optional"/>
+                              <xs:attribute type="xs:string" name="UseToShapeCenter" use="optional"/>
+                              <xs:attribute type="xs:int" name="Width" use="optional"/>
+                              <xs:attribute type="xs:int" name="X" use="optional"/>
+                              <xs:attribute type="xs:int" name="Y" use="optional"/>
+                              <xs:attribute type="xs:byte" name="ZOrder" use="optional"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="AlignToGrid"/>
+                  <xs:attribute type="xs:string" name="AutoExtendActivations"/>
+                  <xs:attribute type="xs:string" name="AutoFitShapesSize"/>
+                  <xs:attribute type="xs:byte" name="ConnectionPointStyle"/>
+                  <xs:attribute type="xs:byte" name="ConnectorLabelOrientation"/>
+                  <xs:attribute type="xs:byte" name="ConnectorLineJumps"/>
+                  <xs:attribute type="xs:byte" name="ConnectorLineJumpsSize"/>
+                  <xs:attribute type="xs:byte" name="ConnectorModelElementNameAlignment"/>
+                  <xs:attribute type="xs:byte" name="ConnectorStyle"/>
+                  <xs:attribute type="xs:string" name="DiagramBackground"/>
+                  <xs:attribute type="xs:byte" name="DisplayLifeLinesAsRobustnessAnalysisIcon"/>
+                  <xs:attribute type="xs:string" name="Editable"/>
+                  <xs:attribute type="xs:string" name="FollowDiagramParentElement"/>
+                  <xs:attribute type="xs:string" name="GridColor"/>
+                  <xs:attribute type="xs:byte" name="GridHeight"/>
+                  <xs:attribute type="xs:string" name="GridVisible"/>
+                  <xs:attribute type="xs:byte" name="GridWidth"/>
+                  <xs:attribute type="xs:short" name="Height"/>
+                  <xs:attribute type="xs:byte" name="HideConnectorIfFromToIsHidden"/>
+                  <xs:attribute type="xs:string" name="HideEmptyTaggedValues"/>
+                  <xs:attribute type="xs:string" name="Id"/>
+                  <xs:attribute type="xs:byte" name="ImageHeight"/>
+                  <xs:attribute type="xs:float" name="ImageScale"/>
+                  <xs:attribute type="xs:byte" name="ImageWidth"/>
+                  <xs:attribute type="xs:string" name="InitializeDiagramForCreate"/>
+                  <xs:attribute type="xs:byte" name="InteractionLifeLinePresentationOption"/>
+                  <xs:attribute type="xs:string" name="Maximized"/>
+                  <xs:attribute type="xs:byte" name="ModelElementNameAlignment"/>
+                  <xs:attribute type="xs:string" name="Name"/>
+                  <xs:attribute type="xs:byte" name="PaintConnectorThroughLabel"/>
+                  <xs:attribute type="xs:string" name="PmAuthor"/>
+                  <xs:attribute type="xs:dateTime" name="PmCreateDateTime"/>
+                  <xs:attribute type="xs:dateTime" name="PmLastModified"/>
+                  <xs:attribute type="xs:string" name="PointConnectorEndToCompartmentMember"/>
+                  <xs:attribute type="xs:byte" name="QualityScore"/>
+                  <xs:attribute type="xs:string" name="RequestFitSizeWithPromptUser"/>
+                  <xs:attribute type="xs:string" name="RequestValidateSnapToGrid"/>
+                  <xs:attribute type="xs:byte" name="SequenceNumberHandling"/>
+                  <xs:attribute type="xs:byte" name="SequenceNumbering"/>
+                  <xs:attribute type="xs:byte" name="ShapePresentationOption"/>
+                  <xs:attribute type="xs:string" name="ShowActivations"/>
+                  <xs:attribute type="xs:int" name="ShowActivityStateNodeCaption"/>
+                  <xs:attribute type="xs:string" name="ShowAllocatedFrom"/>
+                  <xs:attribute type="xs:string" name="ShowAllocatedTo"/>
+                  <xs:attribute type="xs:string" name="ShowArgumentsInMessagesOperationSignature"/>
+                  <xs:attribute type="xs:string" name="ShowColorLegend"/>
+                  <xs:attribute type="xs:byte" name="ShowConnectorName"/>
+                  <xs:attribute type="xs:string" name="ShowConstraints"/>
+                  <xs:attribute type="xs:string" name="ShowDefaultPackage"/>
+                  <xs:attribute type="xs:byte" name="ShowInformationItemOption"/>
+                  <xs:attribute type="xs:string" name="ShowMessageName"/>
+                  <xs:attribute type="xs:string" name="ShowMessageStereotype"/>
+                  <xs:attribute type="xs:string" name="ShowMessagesOperationSignature"/>
+                  <xs:attribute type="xs:string" name="ShowPMAuthor"/>
+                  <xs:attribute type="xs:string" name="ShowPMDifficulty"/>
+                  <xs:attribute type="xs:string" name="ShowPMDiscipline"/>
+                  <xs:attribute type="xs:string" name="ShowPMIteration"/>
+                  <xs:attribute type="xs:string" name="ShowPMPhase"/>
+                  <xs:attribute type="xs:string" name="ShowPMPriority"/>
+                  <xs:attribute type="xs:string" name="ShowPMStatus"/>
+                  <xs:attribute type="xs:string" name="ShowPMVersion"/>
+                  <xs:attribute type="xs:byte" name="ShowPackageNameStyle"/>
+                  <xs:attribute type="xs:string" name="ShowParameterNamesInMessageOperationSignature"/>
+                  <xs:attribute type="xs:string" name="ShowParameterTypesInMessageOperationSignature"/>
+                  <xs:attribute type="xs:string" name="ShowSequenceNumbers"/>
+                  <xs:attribute type="xs:string" name="ShowShapeLegend"/>
+                  <xs:attribute type="xs:string" name="ShowShapeStereotypeIconName"/>
+                  <xs:attribute type="xs:string" name="ShowStereotypes"/>
+                  <xs:attribute type="xs:string" name="ShowTaggedValues"/>
+                  <xs:attribute type="xs:byte" name="TeamworkCreateDateTime"/>
+                  <xs:attribute type="xs:byte" name="TrimmedHeight"/>
+                  <xs:attribute type="xs:byte" name="TrimmedWidth"/>
+                  <xs:attribute type="xs:short" name="Width"/>
+                  <xs:attribute type="xs:byte" name="X"/>
+                  <xs:attribute type="xs:byte" name="Y"/>
+                  <xs:attribute type="xs:float" name="ZoomRatio"/>
+                  <xs:attribute type="xs:string" name="_globalPaletteOption"/>
+                  <xs:attribute type="xs:string" name="_requestFixDiagramForRoseImport"/>
+                  <xs:attribute type="xs:string" name="_requestRecalculateSequenceNumbers"/>
+                  <xs:attribute type="xs:string" name="_rootFrame"/>
+                  <xs:attribute type="xs:string" name="documentation"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:string" name="Author"/>
+      <xs:attribute type="xs:string" name="CommentTableSortAscending"/>
+      <xs:attribute type="xs:string" name="CommentTableSortColumn"/>
+      <xs:attribute type="xs:string" name="DocumentationType"/>
+      <xs:attribute type="xs:string" name="ExportedFromDifferentName"/>
+      <xs:attribute type="xs:float" name="ExporterVersion"/>
+      <xs:attribute type="xs:string" name="Name"/>
+      <xs:attribute type="xs:string" name="TextualAnalysisHighlightOptionCaseSensitive"/>
+      <xs:attribute type="xs:string" name="UmlVersion"/>
+      <xs:attribute type="xs:string" name="Xml_structure"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

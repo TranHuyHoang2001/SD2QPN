@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<net xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" qpme-version="2.1.0">
+    <colors>
+        <color id="2zcdLaaFYGD6YQWm" name="Client" real-color="#B708E2"/>
+        <color id="OxydLaaFYGD6YQW5" name="Cloud API &amp; GateWay" real-color="#714774"/>
+        <color id="t6WdLaaFYGD6YQXE" name="Cloud Worker Role" real-color="#8C9649"/>
+        <color id="kn43LaaFYGD6YQyh" name="requestTask" real-color="#9169C1"/>
+        <color id="9Z87LaaFYGD6YQrg" name="getSubscription" real-color="#77E7CC"/>
+        <color id="YjZ3LaaFYGD6YQzG" name="PlaceTask" real-color="#84DB8F"/>
+        <color id="ekCUraaFYGD6YRA1" name="execute" real-color="#BE281A"/>
+        <color id="iel_LaaFYGD6YQz3" name="result" real-color="#EC77E6"/>
+        <color id="JeD_LaaFYGD6YQ0L" name="result" real-color="#A6B9C7"/>
+    </colors>
+    <queues>
+        <queue id="q_2zcdLaaFYGD6YQWm" name="Client" number-of-servers="1" strategy="FCFS"/>
+        <queue id="q_OxydLaaFYGD6YQW5" name="Cloud API &amp; GateWay" number-of-servers="1" strategy="FCFS"/>
+        <queue id="q_t6WdLaaFYGD6YQXE" name="Cloud Worker Role" number-of-servers="1" strategy="FCFS"/>
+    </queues>
+    <places>
+        <place departure-discipline="NORMAL" id="P_2zcdLaaFYGD6YQWm" name="Client0" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="200" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client0_2zcdLaaFYGD6YQWm"
+                           initial-population="1" lambda="0.1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_vLmQraaFYGD6YQ05b" name="Client1" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="300" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client1_2zcdLaaFYGD6YQWm"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_kn43LaaFYGD6YQyi" name="Client2" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="400" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client2_2zcdLaaFYGD6YQWm"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_vLmQraaFYGD6YQ05e" name="Client3" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="500" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client3_2zcdLaaFYGD6YQWm"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_meD_LaaFYGD6YQ0Hb" name="Client4" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="600" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client4_2zcdLaaFYGD6YQWm"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_JeD_LaaFYGD6YQ0N" name="Client5" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="700" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client5_2zcdLaaFYGD6YQWm"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+                <color-ref color-id="JeD_LaaFYGD6YQ0L" distribution-function="Exponential" id="CL_JeD_LaaFYGD6YQ0L"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_meD_LaaFYGD6YQ0He" name="Client6" queue-ref="q_2zcdLaaFYGD6YQWm"
+               xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="800" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="2zcdLaaFYGD6YQWm" distribution-function="Exponential" id="Client6_2zcdLaaFYGD6YQWm"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_OxydLaaFYGD6YQW5" name="Cloud API &amp; GateWay0"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="200" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay0_OxydLaaFYGD6YQW5" initial-population="1" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_M3uQraaFYGD6YQ1Zb" name="Cloud API &amp; GateWay1"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="300" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay1_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_kn43LaaFYGD6YQyj" name="Cloud API &amp; GateWay2"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="400" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay2_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+                <color-ref color-id="kn43LaaFYGD6YQyh" distribution-function="Exponential" id="CL_kn43LaaFYGD6YQyh"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_M3uQraaFYGD6YQ1Ze" name="Cloud API &amp; GateWay3"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="500" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay3_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_cdu7LaaFYGD6YQtZb" name="Cloud API &amp; GateWay4"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="600" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay4_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_9Z87LaaFYGD6YQrh" name="Cloud API &amp; GateWay5"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="700" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay5_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_9Z87LaaFYGD6YQri" name="Cloud API &amp; GateWay6"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="800" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay6_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+                <color-ref color-id="9Z87LaaFYGD6YQrg" distribution-function="Exponential" id="CL_9Z87LaaFYGD6YQrg"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_cdu7LaaFYGD6YQtZe" name="Cloud API &amp; GateWay7"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="900" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay7_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_viyTLaaFYGD6YQn5b" name="Cloud API &amp; GateWay8"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1000" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay8_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_YjZ3LaaFYGD6YQzH" name="Cloud API &amp; GateWay9"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1100" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay9_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_viyTLaaFYGD6YQn5e" name="Cloud API &amp; GateWay10"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1200" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay10_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_H8qTLaaFYGD6YQoZb" name="Cloud API &amp; GateWay11"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1300" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay11_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_iel_LaaFYGD6YQz5" name="Cloud API &amp; GateWay12"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1400" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay12_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+                <color-ref color-id="iel_LaaFYGD6YQz3" distribution-function="Exponential" id="CL_iel_LaaFYGD6YQz3"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_H8qTLaaFYGD6YQoZe" name="Cloud API &amp; GateWay13"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1500" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay13_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_zUJTLaaFYGD6YQpob" name="Cloud API &amp; GateWay14"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1600" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay14_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_JeD_LaaFYGD6YQ0M" name="Cloud API &amp; GateWay15"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1700" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay15_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_zUJTLaaFYGD6YQpoe" name="Cloud API &amp; GateWay16"
+               queue-ref="q_OxydLaaFYGD6YQW5" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1800" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="OxydLaaFYGD6YQW5" distribution-function="Exponential"
+                           id="Cloud API &amp; GateWay16_OxydLaaFYGD6YQW5" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_t6WdLaaFYGD6YQXE" name="Cloud Worker Role0"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="200" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role0_t6WdLaaFYGD6YQXE" initial-population="1" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_fDZ3LaaFYGD6YQzCb" name="Cloud Worker Role1"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="300" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role1_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_YjZ3LaaFYGD6YQzI" name="Cloud Worker Role2"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="400" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role2_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+                <color-ref color-id="YjZ3LaaFYGD6YQzG" distribution-function="Exponential" id="CL_YjZ3LaaFYGD6YQzG"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_fDZ3LaaFYGD6YQzCe" name="Cloud Worker Role3"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="500" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role3_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_ez50raaFYGD6YRCUb" name="Cloud Worker Role4"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="600" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role4_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_ekCUraaFYGD6YRA2" name="Cloud Worker Role5"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="700" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role5_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_ekCUraaFYGD6YRA3" name="Cloud Worker Role6"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="800" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role6_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+                <color-ref color-id="ekCUraaFYGD6YRA1" distribution-function="Exponential" id="CL_ekCUraaFYGD6YRA1"
+                           initial-population="0" lambda="1" xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_ez50raaFYGD6YRCUe" name="Cloud Worker Role7"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="900" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role7_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_XY3QraaFYGD6YQ1vb" name="Cloud Worker Role8"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1000" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role8_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_iel_LaaFYGD6YQz4" name="Cloud Worker Role9"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1100" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role9_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+        <place departure-discipline="NORMAL" id="P_XY3QraaFYGD6YQ1ve" name="Cloud Worker Role10"
+               queue-ref="q_t6WdLaaFYGD6YQXE" xsi:type="queueing-place">
+            <meta-attributes>
+                <meta-attribute location-x="1200" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+            <color-refs>
+                <color-ref color-id="t6WdLaaFYGD6YQXE" distribution-function="Exponential"
+                           id="Cloud Worker Role10_t6WdLaaFYGD6YQXE" initial-population="0" lambda="1"
+                           xsi:type="queueing-color-reference"/>
+            </color-refs>
+        </place>
+    </places>
+    <transitions>
+        <transition id="T_2zcdLaaFYGD6YQWm" name="tClient0" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_2zcdLaaFYGD6YQWm" name="tClient0" real-color="#A1A6D3"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_2zcdLaaFYGD6YQWm" source-id="Client0_2zcdLaaFYGD6YQWm"
+                            target-id="M_2zcdLaaFYGD6YQWm"/>
+                <connection count="1" id="CM_2zcdLaaFYGD6YQWm" source-id="M_2zcdLaaFYGD6YQWm"
+                            target-id="Client1_2zcdLaaFYGD6YQWm"/>
+                <connection count="1" id="CM_2zcdLaaFYGD6YQWm" source-id="M_2zcdLaaFYGD6YQWm"
+                            target-id="Client0_2zcdLaaFYGD6YQWm"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="250" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_vLmQraaFYGD6YQ05b" name="tClient1" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_vLmQraaFYGD6YQ05b" name="tClient1" real-color="#59CC84"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_vLmQraaFYGD6YQ05b" source-id="Client1_2zcdLaaFYGD6YQWm"
+                            target-id="M_vLmQraaFYGD6YQ05b"/>
+                <connection count="1" id="CM_vLmQraaFYGD6YQ05b" source-id="M_vLmQraaFYGD6YQ05b"
+                            target-id="Client2_2zcdLaaFYGD6YQWm"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="350" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_kn43LaaFYGD6YQyi" name="tClient2" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_kn43LaaFYGD6YQyi" name="tClient2" real-color="#CF8C05"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_kn43LaaFYGD6YQyi" source-id="Client2_2zcdLaaFYGD6YQWm"
+                            target-id="M_kn43LaaFYGD6YQyi"/>
+                <connection count="1" id="CM_kn43LaaFYGD6YQyi" source-id="M_kn43LaaFYGD6YQyi"
+                            target-id="Client3_2zcdLaaFYGD6YQWm"/>
+                <connection count="1" id="CM_kn43LaaFYGD6YQyi" source-id="M_kn43LaaFYGD6YQyi"
+                            target-id="CL_kn43LaaFYGD6YQyh"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="450" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_vLmQraaFYGD6YQ05e" name="tClient3" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_vLmQraaFYGD6YQ05e" name="tClient3" real-color="#8C846F"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_vLmQraaFYGD6YQ05e" source-id="Client3_2zcdLaaFYGD6YQWm"
+                            target-id="M_vLmQraaFYGD6YQ05e"/>
+                <connection count="1" id="CM_vLmQraaFYGD6YQ05e" source-id="M_vLmQraaFYGD6YQ05e"
+                            target-id="Client4_2zcdLaaFYGD6YQWm"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="550" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_meD_LaaFYGD6YQ0Hb" name="tClient4" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_meD_LaaFYGD6YQ0Hb" name="tClient4" real-color="#83D220"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_meD_LaaFYGD6YQ0Hb" source-id="Client4_2zcdLaaFYGD6YQWm"
+                            target-id="M_meD_LaaFYGD6YQ0Hb"/>
+                <connection count="1" id="CM_meD_LaaFYGD6YQ0Hb" source-id="M_meD_LaaFYGD6YQ0Hb"
+                            target-id="Client5_2zcdLaaFYGD6YQWm"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="650" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_JeD_LaaFYGD6YQ0N" name="tClient5" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_JeD_LaaFYGD6YQ0N" name="tClient5" real-color="#76DCE6"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_JeD_LaaFYGD6YQ0N" source-id="Client5_2zcdLaaFYGD6YQWm"
+                            target-id="M_JeD_LaaFYGD6YQ0N"/>
+                <connection count="1" id="CM_JeD_LaaFYGD6YQ0N" source-id="M_JeD_LaaFYGD6YQ0N"
+                            target-id="Client6_2zcdLaaFYGD6YQWm"/>
+                <connection count="1" id="CM_JeD_LaaFYGD6YQ0N" source-id="CL_JeD_LaaFYGD6YQ0L"
+                            target-id="M_JeD_LaaFYGD6YQ0N"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="750" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_meD_LaaFYGD6YQ0He" name="tClient6" priority="0" weight="1.0" xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_meD_LaaFYGD6YQ0He" name="tClient6" real-color="#7F7C40"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_meD_LaaFYGD6YQ0He" source-id="Client6_2zcdLaaFYGD6YQWm"
+                            target-id="M_meD_LaaFYGD6YQ0He"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="850" location-y="200" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_OxydLaaFYGD6YQW5" name="tCloud API &amp; GateWay0" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_OxydLaaFYGD6YQW5" name="tCloud API &amp; GateWay0" real-color="#D5986D"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_OxydLaaFYGD6YQW5" source-id="Cloud API &amp; GateWay0_OxydLaaFYGD6YQW5"
+                            target-id="M_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_OxydLaaFYGD6YQW5" source-id="M_OxydLaaFYGD6YQW5"
+                            target-id="Cloud API &amp; GateWay1_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_OxydLaaFYGD6YQW5" source-id="M_OxydLaaFYGD6YQW5"
+                            target-id="Cloud API &amp; GateWay0_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="250" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_M3uQraaFYGD6YQ1Zb" name="tCloud API &amp; GateWay1" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_M3uQraaFYGD6YQ1Zb" name="tCloud API &amp; GateWay1" real-color="#E29676"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_M3uQraaFYGD6YQ1Zb" source-id="Cloud API &amp; GateWay1_OxydLaaFYGD6YQW5"
+                            target-id="M_M3uQraaFYGD6YQ1Zb"/>
+                <connection count="1" id="CM_M3uQraaFYGD6YQ1Zb" source-id="M_M3uQraaFYGD6YQ1Zb"
+                            target-id="Cloud API &amp; GateWay2_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="350" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_kn43LaaFYGD6YQyj" name="tCloud API &amp; GateWay2" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_kn43LaaFYGD6YQyj" name="tCloud API &amp; GateWay2" real-color="#1E4CBB"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_kn43LaaFYGD6YQyj" source-id="Cloud API &amp; GateWay2_OxydLaaFYGD6YQW5"
+                            target-id="M_kn43LaaFYGD6YQyj"/>
+                <connection count="1" id="CM_kn43LaaFYGD6YQyj" source-id="M_kn43LaaFYGD6YQyj"
+                            target-id="Cloud API &amp; GateWay3_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_kn43LaaFYGD6YQyj" source-id="CL_kn43LaaFYGD6YQyh"
+                            target-id="M_kn43LaaFYGD6YQyj"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="450" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_M3uQraaFYGD6YQ1Ze" name="tCloud API &amp; GateWay3" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_M3uQraaFYGD6YQ1Ze" name="tCloud API &amp; GateWay3" real-color="#EC43EE"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_M3uQraaFYGD6YQ1Ze" source-id="Cloud API &amp; GateWay3_OxydLaaFYGD6YQW5"
+                            target-id="M_M3uQraaFYGD6YQ1Ze"/>
+                <connection count="1" id="CM_M3uQraaFYGD6YQ1Ze" source-id="M_M3uQraaFYGD6YQ1Ze"
+                            target-id="Cloud API &amp; GateWay4_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="550" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_cdu7LaaFYGD6YQtZb" name="tCloud API &amp; GateWay4" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_cdu7LaaFYGD6YQtZb" name="tCloud API &amp; GateWay4" real-color="#5DD47D"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_cdu7LaaFYGD6YQtZb" source-id="Cloud API &amp; GateWay4_OxydLaaFYGD6YQW5"
+                            target-id="M_cdu7LaaFYGD6YQtZb"/>
+                <connection count="1" id="CM_cdu7LaaFYGD6YQtZb" source-id="M_cdu7LaaFYGD6YQtZb"
+                            target-id="Cloud API &amp; GateWay5_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="650" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_9Z87LaaFYGD6YQrh" name="tCloud API &amp; GateWay5" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_9Z87LaaFYGD6YQrh" name="tCloud API &amp; GateWay5" real-color="#0C88A6"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_9Z87LaaFYGD6YQrh" source-id="Cloud API &amp; GateWay5_OxydLaaFYGD6YQW5"
+                            target-id="M_9Z87LaaFYGD6YQrh"/>
+                <connection count="1" id="CM_9Z87LaaFYGD6YQrh" source-id="M_9Z87LaaFYGD6YQrh"
+                            target-id="Cloud API &amp; GateWay6_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_9Z87LaaFYGD6YQrh" source-id="M_9Z87LaaFYGD6YQrh"
+                            target-id="CL_9Z87LaaFYGD6YQrg"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="750" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_9Z87LaaFYGD6YQri" name="tCloud API &amp; GateWay6" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_9Z87LaaFYGD6YQri" name="tCloud API &amp; GateWay6" real-color="#8C320E"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_9Z87LaaFYGD6YQri" source-id="Cloud API &amp; GateWay6_OxydLaaFYGD6YQW5"
+                            target-id="M_9Z87LaaFYGD6YQri"/>
+                <connection count="1" id="CM_9Z87LaaFYGD6YQri" source-id="M_9Z87LaaFYGD6YQri"
+                            target-id="Cloud API &amp; GateWay7_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_9Z87LaaFYGD6YQri" source-id="CL_9Z87LaaFYGD6YQrg"
+                            target-id="M_9Z87LaaFYGD6YQri"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="850" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_cdu7LaaFYGD6YQtZe" name="tCloud API &amp; GateWay7" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_cdu7LaaFYGD6YQtZe" name="tCloud API &amp; GateWay7" real-color="#492DD8"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_cdu7LaaFYGD6YQtZe" source-id="Cloud API &amp; GateWay7_OxydLaaFYGD6YQW5"
+                            target-id="M_cdu7LaaFYGD6YQtZe"/>
+                <connection count="1" id="CM_cdu7LaaFYGD6YQtZe" source-id="M_cdu7LaaFYGD6YQtZe"
+                            target-id="Cloud API &amp; GateWay8_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="950" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_viyTLaaFYGD6YQn5b" name="tCloud API &amp; GateWay8" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_viyTLaaFYGD6YQn5b" name="tCloud API &amp; GateWay8" real-color="#1FDB97"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_viyTLaaFYGD6YQn5b" source-id="Cloud API &amp; GateWay8_OxydLaaFYGD6YQW5"
+                            target-id="M_viyTLaaFYGD6YQn5b"/>
+                <connection count="1" id="CM_viyTLaaFYGD6YQn5b" source-id="M_viyTLaaFYGD6YQn5b"
+                            target-id="Cloud API &amp; GateWay9_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1050" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_YjZ3LaaFYGD6YQzH" name="tCloud API &amp; GateWay9" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_YjZ3LaaFYGD6YQzH" name="tCloud API &amp; GateWay9" real-color="#AB367B"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_YjZ3LaaFYGD6YQzH" source-id="Cloud API &amp; GateWay9_OxydLaaFYGD6YQW5"
+                            target-id="M_YjZ3LaaFYGD6YQzH"/>
+                <connection count="1" id="CM_YjZ3LaaFYGD6YQzH" source-id="M_YjZ3LaaFYGD6YQzH"
+                            target-id="Cloud API &amp; GateWay10_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_YjZ3LaaFYGD6YQzH" source-id="M_YjZ3LaaFYGD6YQzH"
+                            target-id="CL_YjZ3LaaFYGD6YQzG"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1150" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_viyTLaaFYGD6YQn5e" name="tCloud API &amp; GateWay10" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_viyTLaaFYGD6YQn5e" name="tCloud API &amp; GateWay10"
+                      real-color="#36A6D0"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_viyTLaaFYGD6YQn5e" source-id="Cloud API &amp; GateWay10_OxydLaaFYGD6YQW5"
+                            target-id="M_viyTLaaFYGD6YQn5e"/>
+                <connection count="1" id="CM_viyTLaaFYGD6YQn5e" source-id="M_viyTLaaFYGD6YQn5e"
+                            target-id="Cloud API &amp; GateWay11_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1250" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_H8qTLaaFYGD6YQoZb" name="tCloud API &amp; GateWay11" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_H8qTLaaFYGD6YQoZb" name="tCloud API &amp; GateWay11"
+                      real-color="#4B3D51"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_H8qTLaaFYGD6YQoZb" source-id="Cloud API &amp; GateWay11_OxydLaaFYGD6YQW5"
+                            target-id="M_H8qTLaaFYGD6YQoZb"/>
+                <connection count="1" id="CM_H8qTLaaFYGD6YQoZb" source-id="M_H8qTLaaFYGD6YQoZb"
+                            target-id="Cloud API &amp; GateWay12_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1350" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_iel_LaaFYGD6YQz5" name="tCloud API &amp; GateWay12" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_iel_LaaFYGD6YQz5" name="tCloud API &amp; GateWay12" real-color="#699FF9"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_iel_LaaFYGD6YQz5" source-id="Cloud API &amp; GateWay12_OxydLaaFYGD6YQW5"
+                            target-id="M_iel_LaaFYGD6YQz5"/>
+                <connection count="1" id="CM_iel_LaaFYGD6YQz5" source-id="M_iel_LaaFYGD6YQz5"
+                            target-id="Cloud API &amp; GateWay13_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_iel_LaaFYGD6YQz5" source-id="CL_iel_LaaFYGD6YQz3"
+                            target-id="M_iel_LaaFYGD6YQz5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1450" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_H8qTLaaFYGD6YQoZe" name="tCloud API &amp; GateWay13" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_H8qTLaaFYGD6YQoZe" name="tCloud API &amp; GateWay13"
+                      real-color="#0C5B9D"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_H8qTLaaFYGD6YQoZe" source-id="Cloud API &amp; GateWay13_OxydLaaFYGD6YQW5"
+                            target-id="M_H8qTLaaFYGD6YQoZe"/>
+                <connection count="1" id="CM_H8qTLaaFYGD6YQoZe" source-id="M_H8qTLaaFYGD6YQoZe"
+                            target-id="Cloud API &amp; GateWay14_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1550" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_zUJTLaaFYGD6YQpob" name="tCloud API &amp; GateWay14" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_zUJTLaaFYGD6YQpob" name="tCloud API &amp; GateWay14"
+                      real-color="#B773C0"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_zUJTLaaFYGD6YQpob" source-id="Cloud API &amp; GateWay14_OxydLaaFYGD6YQW5"
+                            target-id="M_zUJTLaaFYGD6YQpob"/>
+                <connection count="1" id="CM_zUJTLaaFYGD6YQpob" source-id="M_zUJTLaaFYGD6YQpob"
+                            target-id="Cloud API &amp; GateWay15_OxydLaaFYGD6YQW5"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1650" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_JeD_LaaFYGD6YQ0M" name="tCloud API &amp; GateWay15" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_JeD_LaaFYGD6YQ0M" name="tCloud API &amp; GateWay15" real-color="#2259A5"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_JeD_LaaFYGD6YQ0M" source-id="Cloud API &amp; GateWay15_OxydLaaFYGD6YQW5"
+                            target-id="M_JeD_LaaFYGD6YQ0M"/>
+                <connection count="1" id="CM_JeD_LaaFYGD6YQ0M" source-id="M_JeD_LaaFYGD6YQ0M"
+                            target-id="Cloud API &amp; GateWay16_OxydLaaFYGD6YQW5"/>
+                <connection count="1" id="CM_JeD_LaaFYGD6YQ0M" source-id="M_JeD_LaaFYGD6YQ0M"
+                            target-id="CL_JeD_LaaFYGD6YQ0L"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1750" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_zUJTLaaFYGD6YQpoe" name="tCloud API &amp; GateWay16" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_zUJTLaaFYGD6YQpoe" name="tCloud API &amp; GateWay16"
+                      real-color="#8567D5"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_zUJTLaaFYGD6YQpoe" source-id="Cloud API &amp; GateWay16_OxydLaaFYGD6YQW5"
+                            target-id="M_zUJTLaaFYGD6YQpoe"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1850" location-y="300" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_t6WdLaaFYGD6YQXE" name="tCloud Worker Role0" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_t6WdLaaFYGD6YQXE" name="tCloud Worker Role0" real-color="#04857B"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_t6WdLaaFYGD6YQXE" source-id="Cloud Worker Role0_t6WdLaaFYGD6YQXE"
+                            target-id="M_t6WdLaaFYGD6YQXE"/>
+                <connection count="1" id="CM_t6WdLaaFYGD6YQXE" source-id="M_t6WdLaaFYGD6YQXE"
+                            target-id="Cloud Worker Role1_t6WdLaaFYGD6YQXE"/>
+                <connection count="1" id="CM_t6WdLaaFYGD6YQXE" source-id="M_t6WdLaaFYGD6YQXE"
+                            target-id="Cloud Worker Role0_t6WdLaaFYGD6YQXE"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="250" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_fDZ3LaaFYGD6YQzCb" name="tCloud Worker Role1" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_fDZ3LaaFYGD6YQzCb" name="tCloud Worker Role1" real-color="#48EAFF"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_fDZ3LaaFYGD6YQzCb" source-id="Cloud Worker Role1_t6WdLaaFYGD6YQXE"
+                            target-id="M_fDZ3LaaFYGD6YQzCb"/>
+                <connection count="1" id="CM_fDZ3LaaFYGD6YQzCb" source-id="M_fDZ3LaaFYGD6YQzCb"
+                            target-id="Cloud Worker Role2_t6WdLaaFYGD6YQXE"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="350" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_YjZ3LaaFYGD6YQzI" name="tCloud Worker Role2" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_YjZ3LaaFYGD6YQzI" name="tCloud Worker Role2" real-color="#6F63B7"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_YjZ3LaaFYGD6YQzI" source-id="Cloud Worker Role2_t6WdLaaFYGD6YQXE"
+                            target-id="M_YjZ3LaaFYGD6YQzI"/>
+                <connection count="1" id="CM_YjZ3LaaFYGD6YQzI" source-id="M_YjZ3LaaFYGD6YQzI"
+                            target-id="Cloud Worker Role3_t6WdLaaFYGD6YQXE"/>
+                <connection count="1" id="CM_YjZ3LaaFYGD6YQzI" source-id="CL_YjZ3LaaFYGD6YQzG"
+                            target-id="M_YjZ3LaaFYGD6YQzI"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="450" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_fDZ3LaaFYGD6YQzCe" name="tCloud Worker Role3" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_fDZ3LaaFYGD6YQzCe" name="tCloud Worker Role3" real-color="#9B1DCC"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_fDZ3LaaFYGD6YQzCe" source-id="Cloud Worker Role3_t6WdLaaFYGD6YQXE"
+                            target-id="M_fDZ3LaaFYGD6YQzCe"/>
+                <connection count="1" id="CM_fDZ3LaaFYGD6YQzCe" source-id="M_fDZ3LaaFYGD6YQzCe"
+                            target-id="Cloud Worker Role4_t6WdLaaFYGD6YQXE"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="550" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_ez50raaFYGD6YRCUb" name="tCloud Worker Role4" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_ez50raaFYGD6YRCUb" name="tCloud Worker Role4" real-color="#C8E5A7"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_ez50raaFYGD6YRCUb" source-id="Cloud Worker Role4_t6WdLaaFYGD6YQXE"
+                            target-id="M_ez50raaFYGD6YRCUb"/>
+                <connection count="1" id="CM_ez50raaFYGD6YRCUb" source-id="M_ez50raaFYGD6YRCUb"
+                            target-id="Cloud Worker Role5_t6WdLaaFYGD6YQXE"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="650" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_ekCUraaFYGD6YRA2" name="tCloud Worker Role5" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_ekCUraaFYGD6YRA2" name="tCloud Worker Role5" real-color="#D79572"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_ekCUraaFYGD6YRA2" source-id="Cloud Worker Role5_t6WdLaaFYGD6YQXE"
+                            target-id="M_ekCUraaFYGD6YRA2"/>
+                <connection count="1" id="CM_ekCUraaFYGD6YRA2" source-id="M_ekCUraaFYGD6YRA2"
+                            target-id="Cloud Worker Role6_t6WdLaaFYGD6YQXE"/>
+                <connection count="1" id="CM_ekCUraaFYGD6YRA2" source-id="M_ekCUraaFYGD6YRA2"
+                            target-id="CL_ekCUraaFYGD6YRA1"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="750" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_ekCUraaFYGD6YRA3" name="tCloud Worker Role6" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_ekCUraaFYGD6YRA3" name="tCloud Worker Role6" real-color="#45D5CB"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_ekCUraaFYGD6YRA3" source-id="Cloud Worker Role6_t6WdLaaFYGD6YQXE"
+                            target-id="M_ekCUraaFYGD6YRA3"/>
+                <connection count="1" id="CM_ekCUraaFYGD6YRA3" source-id="M_ekCUraaFYGD6YRA3"
+                            target-id="Cloud Worker Role7_t6WdLaaFYGD6YQXE"/>
+                <connection count="1" id="CM_ekCUraaFYGD6YRA3" source-id="CL_ekCUraaFYGD6YRA1"
+                            target-id="M_ekCUraaFYGD6YRA3"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="850" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_ez50raaFYGD6YRCUe" name="tCloud Worker Role7" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_ez50raaFYGD6YRCUe" name="tCloud Worker Role7" real-color="#EB2165"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_ez50raaFYGD6YRCUe" source-id="Cloud Worker Role7_t6WdLaaFYGD6YQXE"
+                            target-id="M_ez50raaFYGD6YRCUe"/>
+                <connection count="1" id="CM_ez50raaFYGD6YRCUe" source-id="M_ez50raaFYGD6YRCUe"
+                            target-id="Cloud Worker Role8_t6WdLaaFYGD6YQXE"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="950" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_XY3QraaFYGD6YQ1vb" name="tCloud Worker Role8" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_XY3QraaFYGD6YQ1vb" name="tCloud Worker Role8" real-color="#27D5EB"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_XY3QraaFYGD6YQ1vb" source-id="Cloud Worker Role8_t6WdLaaFYGD6YQXE"
+                            target-id="M_XY3QraaFYGD6YQ1vb"/>
+                <connection count="1" id="CM_XY3QraaFYGD6YQ1vb" source-id="M_XY3QraaFYGD6YQ1vb"
+                            target-id="Cloud Worker Role9_t6WdLaaFYGD6YQXE"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1050" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_iel_LaaFYGD6YQz4" name="tCloud Worker Role9" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_iel_LaaFYGD6YQz4" name="tCloud Worker Role9" real-color="#8096C2"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_iel_LaaFYGD6YQz4" source-id="Cloud Worker Role9_t6WdLaaFYGD6YQXE"
+                            target-id="M_iel_LaaFYGD6YQz4"/>
+                <connection count="1" id="CM_iel_LaaFYGD6YQz4" source-id="M_iel_LaaFYGD6YQz4"
+                            target-id="Cloud Worker Role10_t6WdLaaFYGD6YQXE"/>
+                <connection count="1" id="CM_iel_LaaFYGD6YQz4" source-id="M_iel_LaaFYGD6YQz4"
+                            target-id="CL_iel_LaaFYGD6YQz3"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1150" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+        <transition id="T_XY3QraaFYGD6YQ1ve" name="tCloud Worker Role10" priority="0" weight="1.0"
+                    xsi:type="immediate-transition">
+            <modes>
+                <mode firing-weight="1" id="M_XY3QraaFYGD6YQ1ve" name="tCloud Worker Role10" real-color="#6E179A"/>
+            </modes>
+            <connections>
+                <connection count="1" id="CM_XY3QraaFYGD6YQ1ve" source-id="Cloud Worker Role10_t6WdLaaFYGD6YQXE"
+                            target-id="M_XY3QraaFYGD6YQ1ve"/>
+            </connections>
+            <meta-attributes>
+                <meta-attribute location-x="1250" location-y="400" xsi:type="location-attribute"/>
+            </meta-attributes>
+        </transition>
+    </transitions>
+    <connections>
+        <connection id="C_2zcdLaaFYGD6YQWm" source-id="P_2zcdLaaFYGD6YQWm" target-id="T_2zcdLaaFYGD6YQWm"/>
+        <connection id="C_vLmQraaFYGD6YQ05b" source-id="P_vLmQraaFYGD6YQ05b" target-id="T_vLmQraaFYGD6YQ05b"/>
+        <connection id="CP_vLmQraaFYGD6YQ05b" source-id="T_2zcdLaaFYGD6YQWm" target-id="P_vLmQraaFYGD6YQ05b"/>
+        <connection id="C_kn43LaaFYGD6YQyi" source-id="P_kn43LaaFYGD6YQyi" target-id="T_kn43LaaFYGD6YQyi"/>
+        <connection id="CP_kn43LaaFYGD6YQyi" source-id="T_vLmQraaFYGD6YQ05b" target-id="P_kn43LaaFYGD6YQyi"/>
+        <connection id="C_vLmQraaFYGD6YQ05e" source-id="P_vLmQraaFYGD6YQ05e" target-id="T_vLmQraaFYGD6YQ05e"/>
+        <connection id="CP_vLmQraaFYGD6YQ05e" source-id="T_kn43LaaFYGD6YQyi" target-id="P_vLmQraaFYGD6YQ05e"/>
+        <connection id="C_meD_LaaFYGD6YQ0Hb" source-id="P_meD_LaaFYGD6YQ0Hb" target-id="T_meD_LaaFYGD6YQ0Hb"/>
+        <connection id="CP_meD_LaaFYGD6YQ0Hb" source-id="T_vLmQraaFYGD6YQ05e" target-id="P_meD_LaaFYGD6YQ0Hb"/>
+        <connection id="C_JeD_LaaFYGD6YQ0N" source-id="P_JeD_LaaFYGD6YQ0N" target-id="T_JeD_LaaFYGD6YQ0N"/>
+        <connection id="CP_JeD_LaaFYGD6YQ0N" source-id="T_meD_LaaFYGD6YQ0Hb" target-id="P_JeD_LaaFYGD6YQ0N"/>
+        <connection id="C_meD_LaaFYGD6YQ0He" source-id="P_meD_LaaFYGD6YQ0He" target-id="T_meD_LaaFYGD6YQ0He"/>
+        <connection id="CP_meD_LaaFYGD6YQ0He" source-id="T_JeD_LaaFYGD6YQ0N" target-id="P_meD_LaaFYGD6YQ0He"/>
+        <connection id="C_OxydLaaFYGD6YQW5" source-id="P_OxydLaaFYGD6YQW5" target-id="T_OxydLaaFYGD6YQW5"/>
+        <connection id="C_M3uQraaFYGD6YQ1Zb" source-id="P_M3uQraaFYGD6YQ1Zb" target-id="T_M3uQraaFYGD6YQ1Zb"/>
+        <connection id="CP_M3uQraaFYGD6YQ1Zb" source-id="T_OxydLaaFYGD6YQW5" target-id="P_M3uQraaFYGD6YQ1Zb"/>
+        <connection id="C_kn43LaaFYGD6YQyj" source-id="P_kn43LaaFYGD6YQyj" target-id="T_kn43LaaFYGD6YQyj"/>
+        <connection id="CP_kn43LaaFYGD6YQyj" source-id="T_M3uQraaFYGD6YQ1Zb" target-id="P_kn43LaaFYGD6YQyj"/>
+        <connection id="C_M3uQraaFYGD6YQ1Ze" source-id="P_M3uQraaFYGD6YQ1Ze" target-id="T_M3uQraaFYGD6YQ1Ze"/>
+        <connection id="CP_M3uQraaFYGD6YQ1Ze" source-id="T_kn43LaaFYGD6YQyj" target-id="P_M3uQraaFYGD6YQ1Ze"/>
+        <connection id="C_cdu7LaaFYGD6YQtZb" source-id="P_cdu7LaaFYGD6YQtZb" target-id="T_cdu7LaaFYGD6YQtZb"/>
+        <connection id="CP_cdu7LaaFYGD6YQtZb" source-id="T_M3uQraaFYGD6YQ1Ze" target-id="P_cdu7LaaFYGD6YQtZb"/>
+        <connection id="C_9Z87LaaFYGD6YQrh" source-id="P_9Z87LaaFYGD6YQrh" target-id="T_9Z87LaaFYGD6YQrh"/>
+        <connection id="CP_9Z87LaaFYGD6YQrh" source-id="T_cdu7LaaFYGD6YQtZb" target-id="P_9Z87LaaFYGD6YQrh"/>
+        <connection id="C_9Z87LaaFYGD6YQri" source-id="P_9Z87LaaFYGD6YQri" target-id="T_9Z87LaaFYGD6YQri"/>
+        <connection id="CP_9Z87LaaFYGD6YQri" source-id="T_9Z87LaaFYGD6YQrh" target-id="P_9Z87LaaFYGD6YQri"/>
+        <connection id="C_cdu7LaaFYGD6YQtZe" source-id="P_cdu7LaaFYGD6YQtZe" target-id="T_cdu7LaaFYGD6YQtZe"/>
+        <connection id="CP_cdu7LaaFYGD6YQtZe" source-id="T_9Z87LaaFYGD6YQri" target-id="P_cdu7LaaFYGD6YQtZe"/>
+        <connection id="C_viyTLaaFYGD6YQn5b" source-id="P_viyTLaaFYGD6YQn5b" target-id="T_viyTLaaFYGD6YQn5b"/>
+        <connection id="CP_viyTLaaFYGD6YQn5b" source-id="T_cdu7LaaFYGD6YQtZe" target-id="P_viyTLaaFYGD6YQn5b"/>
+        <connection id="C_YjZ3LaaFYGD6YQzH" source-id="P_YjZ3LaaFYGD6YQzH" target-id="T_YjZ3LaaFYGD6YQzH"/>
+        <connection id="CP_YjZ3LaaFYGD6YQzH" source-id="T_viyTLaaFYGD6YQn5b" target-id="P_YjZ3LaaFYGD6YQzH"/>
+        <connection id="C_viyTLaaFYGD6YQn5e" source-id="P_viyTLaaFYGD6YQn5e" target-id="T_viyTLaaFYGD6YQn5e"/>
+        <connection id="CP_viyTLaaFYGD6YQn5e" source-id="T_YjZ3LaaFYGD6YQzH" target-id="P_viyTLaaFYGD6YQn5e"/>
+        <connection id="C_H8qTLaaFYGD6YQoZb" source-id="P_H8qTLaaFYGD6YQoZb" target-id="T_H8qTLaaFYGD6YQoZb"/>
+        <connection id="CP_H8qTLaaFYGD6YQoZb" source-id="T_viyTLaaFYGD6YQn5e" target-id="P_H8qTLaaFYGD6YQoZb"/>
+        <connection id="C_iel_LaaFYGD6YQz5" source-id="P_iel_LaaFYGD6YQz5" target-id="T_iel_LaaFYGD6YQz5"/>
+        <connection id="CP_iel_LaaFYGD6YQz5" source-id="T_H8qTLaaFYGD6YQoZb" target-id="P_iel_LaaFYGD6YQz5"/>
+        <connection id="C_H8qTLaaFYGD6YQoZe" source-id="P_H8qTLaaFYGD6YQoZe" target-id="T_H8qTLaaFYGD6YQoZe"/>
+        <connection id="CP_H8qTLaaFYGD6YQoZe" source-id="T_iel_LaaFYGD6YQz5" target-id="P_H8qTLaaFYGD6YQoZe"/>
+        <connection id="C_zUJTLaaFYGD6YQpob" source-id="P_zUJTLaaFYGD6YQpob" target-id="T_zUJTLaaFYGD6YQpob"/>
+        <connection id="CP_zUJTLaaFYGD6YQpob" source-id="T_H8qTLaaFYGD6YQoZe" target-id="P_zUJTLaaFYGD6YQpob"/>
+        <connection id="C_JeD_LaaFYGD6YQ0M" source-id="P_JeD_LaaFYGD6YQ0M" target-id="T_JeD_LaaFYGD6YQ0M"/>
+        <connection id="CP_JeD_LaaFYGD6YQ0M" source-id="T_zUJTLaaFYGD6YQpob" target-id="P_JeD_LaaFYGD6YQ0M"/>
+        <connection id="C_zUJTLaaFYGD6YQpoe" source-id="P_zUJTLaaFYGD6YQpoe" target-id="T_zUJTLaaFYGD6YQpoe"/>
+        <connection id="CP_zUJTLaaFYGD6YQpoe" source-id="T_JeD_LaaFYGD6YQ0M" target-id="P_zUJTLaaFYGD6YQpoe"/>
+        <connection id="C_t6WdLaaFYGD6YQXE" source-id="P_t6WdLaaFYGD6YQXE" target-id="T_t6WdLaaFYGD6YQXE"/>
+        <connection id="C_fDZ3LaaFYGD6YQzCb" source-id="P_fDZ3LaaFYGD6YQzCb" target-id="T_fDZ3LaaFYGD6YQzCb"/>
+        <connection id="CP_fDZ3LaaFYGD6YQzCb" source-id="T_t6WdLaaFYGD6YQXE" target-id="P_fDZ3LaaFYGD6YQzCb"/>
+        <connection id="C_YjZ3LaaFYGD6YQzI" source-id="P_YjZ3LaaFYGD6YQzI" target-id="T_YjZ3LaaFYGD6YQzI"/>
+        <connection id="CP_YjZ3LaaFYGD6YQzI" source-id="T_fDZ3LaaFYGD6YQzCb" target-id="P_YjZ3LaaFYGD6YQzI"/>
+        <connection id="C_fDZ3LaaFYGD6YQzCe" source-id="P_fDZ3LaaFYGD6YQzCe" target-id="T_fDZ3LaaFYGD6YQzCe"/>
+        <connection id="CP_fDZ3LaaFYGD6YQzCe" source-id="T_YjZ3LaaFYGD6YQzI" target-id="P_fDZ3LaaFYGD6YQzCe"/>
+        <connection id="C_ez50raaFYGD6YRCUb" source-id="P_ez50raaFYGD6YRCUb" target-id="T_ez50raaFYGD6YRCUb"/>
+        <connection id="CP_ez50raaFYGD6YRCUb" source-id="T_fDZ3LaaFYGD6YQzCe" target-id="P_ez50raaFYGD6YRCUb"/>
+        <connection id="C_ekCUraaFYGD6YRA2" source-id="P_ekCUraaFYGD6YRA2" target-id="T_ekCUraaFYGD6YRA2"/>
+        <connection id="CP_ekCUraaFYGD6YRA2" source-id="T_ez50raaFYGD6YRCUb" target-id="P_ekCUraaFYGD6YRA2"/>
+        <connection id="C_ekCUraaFYGD6YRA3" source-id="P_ekCUraaFYGD6YRA3" target-id="T_ekCUraaFYGD6YRA3"/>
+        <connection id="CP_ekCUraaFYGD6YRA3" source-id="T_ekCUraaFYGD6YRA2" target-id="P_ekCUraaFYGD6YRA3"/>
+        <connection id="C_ez50raaFYGD6YRCUe" source-id="P_ez50raaFYGD6YRCUe" target-id="T_ez50raaFYGD6YRCUe"/>
+        <connection id="CP_ez50raaFYGD6YRCUe" source-id="T_ekCUraaFYGD6YRA3" target-id="P_ez50raaFYGD6YRCUe"/>
+        <connection id="C_XY3QraaFYGD6YQ1vb" source-id="P_XY3QraaFYGD6YQ1vb" target-id="T_XY3QraaFYGD6YQ1vb"/>
+        <connection id="CP_XY3QraaFYGD6YQ1vb" source-id="T_ez50raaFYGD6YRCUe" target-id="P_XY3QraaFYGD6YQ1vb"/>
+        <connection id="C_iel_LaaFYGD6YQz4" source-id="P_iel_LaaFYGD6YQz4" target-id="T_iel_LaaFYGD6YQz4"/>
+        <connection id="CP_iel_LaaFYGD6YQz4" source-id="T_XY3QraaFYGD6YQ1vb" target-id="P_iel_LaaFYGD6YQz4"/>
+        <connection id="C_XY3QraaFYGD6YQ1ve" source-id="P_XY3QraaFYGD6YQ1ve" target-id="T_XY3QraaFYGD6YQ1ve"/>
+        <connection id="CP_XY3QraaFYGD6YQ1ve" source-id="T_iel_LaaFYGD6YQz4" target-id="P_XY3QraaFYGD6YQ1ve"/>
+        <connection id="CXX_kn43LaaFYGD6YQyh" source-id="T_kn43LaaFYGD6YQyi" target-id="P_kn43LaaFYGD6YQyj"/>
+        <connection id="CXX_9Z87LaaFYGD6YQrg" source-id="T_9Z87LaaFYGD6YQrh" target-id="P_9Z87LaaFYGD6YQri"/>
+        <connection id="CXX_YjZ3LaaFYGD6YQzG" source-id="T_YjZ3LaaFYGD6YQzH" target-id="P_YjZ3LaaFYGD6YQzI"/>
+        <connection id="CXX_ekCUraaFYGD6YRA1" source-id="T_ekCUraaFYGD6YRA2" target-id="P_ekCUraaFYGD6YRA3"/>
+        <connection id="CXX_iel_LaaFYGD6YQz3" source-id="T_iel_LaaFYGD6YQz4" target-id="P_iel_LaaFYGD6YQz5"/>
+        <connection id="CXX_JeD_LaaFYGD6YQ0L" source-id="T_JeD_LaaFYGD6YQ0M" target-id="P_JeD_LaaFYGD6YQ0N"/>
+        <connection id="C_2zcdLaaFYGD6YQWm" source-id="T_2zcdLaaFYGD6YQWm" target-id="P_2zcdLaaFYGD6YQWm"/>
+        <connection id="C_meD_LaaFYGD6YQ0He" source-id="T_meD_LaaFYGD6YQ0He" target-id="P_meD_LaaFYGD6YQ0He"/>
+        <connection id="C_OxydLaaFYGD6YQW5" source-id="T_OxydLaaFYGD6YQW5" target-id="P_OxydLaaFYGD6YQW5"/>
+        <connection id="C_zUJTLaaFYGD6YQpoe" source-id="T_zUJTLaaFYGD6YQpoe" target-id="P_zUJTLaaFYGD6YQpoe"/>
+        <connection id="C_t6WdLaaFYGD6YQXE" source-id="T_t6WdLaaFYGD6YQXE" target-id="P_t6WdLaaFYGD6YQXE"/>
+        <connection id="C_XY3QraaFYGD6YQ1ve" source-id="T_XY3QraaFYGD6YQ1ve" target-id="P_XY3QraaFYGD6YQ1ve"/>
+    </connections>
+</net>

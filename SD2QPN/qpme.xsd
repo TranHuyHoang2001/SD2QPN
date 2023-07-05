@@ -1,0 +1,398 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="net">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="colors">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="color" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                                            <xs:attribute type="xs:string" name="real-color" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="queues">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="queue" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                                            <xs:attribute type="xs:int" name="number-of-servers" use="optional"/>
+                                            <xs:attribute type="xs:string" name="strategy" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="places">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="place" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="subnet" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element type="xs:string" name="colors"/>
+                                                    <xs:element name="places">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="place" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="subnet" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element type="xs:string" name="colors"/>
+                                                                                        <xs:element name="places">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="place" maxOccurs="unbounded" minOccurs="0">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:sequence>
+                                                                                                                <xs:element name="meta-attributes">
+                                                                                                                    <xs:complexType>
+                                                                                                                        <xs:sequence>
+                                                                                                                            <xs:element name="meta-attribute">
+                                                                                                                                <xs:complexType>
+                                                                                                                                    <xs:simpleContent>
+                                                                                                                                        <xs:extension base="xs:string">
+                                                                                                                                            <xs:attribute type="xs:int" name="location-x" use="optional"/>
+                                                                                                                                            <xs:attribute type="xs:int" name="location-y" use="optional"/>
+                                                                                                                                        </xs:extension>
+                                                                                                                                    </xs:simpleContent>
+                                                                                                                                </xs:complexType>
+                                                                                                                            </xs:element>
+                                                                                                                        </xs:sequence>
+                                                                                                                    </xs:complexType>
+                                                                                                                </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                                                            <xs:attribute type="xs:string" name="departure-discipline" use="optional"/>
+                                                                                                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                                                            <xs:attribute type="xs:string" name="locked" use="optional"/>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element name="transitions">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="transition" maxOccurs="unbounded" minOccurs="0">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:sequence>
+                                                                                                                <xs:element name="meta-attributes">
+                                                                                                                    <xs:complexType>
+                                                                                                                        <xs:sequence>
+                                                                                                                            <xs:element name="meta-attribute">
+                                                                                                                                <xs:complexType>
+                                                                                                                                    <xs:simpleContent>
+                                                                                                                                        <xs:extension base="xs:string">
+                                                                                                                                            <xs:attribute type="xs:int" name="location-x" use="optional"/>
+                                                                                                                                            <xs:attribute type="xs:int" name="location-y" use="optional"/>
+                                                                                                                                        </xs:extension>
+                                                                                                                                    </xs:simpleContent>
+                                                                                                                                </xs:complexType>
+                                                                                                                            </xs:element>
+                                                                                                                        </xs:sequence>
+                                                                                                                    </xs:complexType>
+                                                                                                                </xs:element>
+                                                                                                            </xs:sequence>
+                                                                                                            <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                                                            <xs:attribute type="xs:float" name="weight" use="optional"/>
+                                                                                                            <xs:attribute type="xs:int" name="priority" use="optional"/>
+                                                                                                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                        <xs:element name="connections">
+                                                                                            <xs:complexType>
+                                                                                                <xs:sequence>
+                                                                                                    <xs:element name="connection" maxOccurs="unbounded" minOccurs="0">
+                                                                                                        <xs:complexType>
+                                                                                                            <xs:simpleContent>
+                                                                                                                <xs:extension base="xs:string">
+                                                                                                                    <xs:attribute type="xs:string" name="source-id" use="optional"/>
+                                                                                                                    <xs:attribute type="xs:string" name="target-id" use="optional"/>
+                                                                                                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                                                                </xs:extension>
+                                                                                                            </xs:simpleContent>
+                                                                                                        </xs:complexType>
+                                                                                                    </xs:element>
+                                                                                                </xs:sequence>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="meta-attributes">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="meta-attribute">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:string">
+                                                                                                        <xs:attribute type="xs:int" name="location-x" use="optional"/>
+                                                                                                        <xs:attribute type="xs:int" name="location-y" use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="color-refs" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="color-ref">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:string">
+                                                                                                        <xs:attribute type="xs:string" name="color-id" use="optional"/>
+                                                                                                        <xs:attribute type="xs:int" name="maximum-capacity" use="optional"/>
+                                                                                                        <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                                                        <xs:attribute type="xs:int" name="ranking" use="optional"/>
+                                                                                                        <xs:attribute type="xs:int" name="priority" use="optional"/>
+                                                                                                        <xs:attribute type="xs:string" name="distribution-function" use="optional"/>
+                                                                                                        <xs:attribute type="xs:float" name="lambda" use="optional"/>
+                                                                                                        <xs:attribute type="xs:int" name="initial-population" use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                        </xs:sequence>
+                                                                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                        <xs:attribute type="xs:string" name="departure-discipline" use="optional"/>
+                                                                        <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                        <xs:attribute type="xs:string" name="locked" use="optional"/>
+                                                                        <xs:attribute type="xs:string" name="queue-ref" use="optional"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="transitions">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="transition" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:sequence>
+                                                                            <xs:element name="meta-attributes">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="meta-attribute">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:string">
+                                                                                                        <xs:attribute type="xs:int" name="location-x" use="optional"/>
+                                                                                                        <xs:attribute type="xs:int" name="location-y" use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element name="modes" minOccurs="0">
+                                                                                <xs:complexType>
+                                                                                    <xs:sequence>
+                                                                                        <xs:element name="mode">
+                                                                                            <xs:complexType>
+                                                                                                <xs:simpleContent>
+                                                                                                    <xs:extension base="xs:string">
+                                                                                                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                                                        <xs:attribute type="xs:string" name="real-color" use="optional"/>
+                                                                                                        <xs:attribute type="xs:float" name="firing-weight" use="optional"/>
+                                                                                                        <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                                                    </xs:extension>
+                                                                                                </xs:simpleContent>
+                                                                                            </xs:complexType>
+                                                                                        </xs:element>
+                                                                                    </xs:sequence>
+                                                                                </xs:complexType>
+                                                                            </xs:element>
+                                                                            <xs:element type="xs:string" name="connections" minOccurs="0"/>
+                                                                        </xs:sequence>
+                                                                        <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                        <xs:attribute type="xs:float" name="weight" use="optional"/>
+                                                                        <xs:attribute type="xs:int" name="priority" use="optional"/>
+                                                                        <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                    <xs:element name="connections">
+                                                        <xs:complexType>
+                                                            <xs:sequence>
+                                                                <xs:element name="connection" maxOccurs="unbounded" minOccurs="0">
+                                                                    <xs:complexType>
+                                                                        <xs:simpleContent>
+                                                                            <xs:extension base="xs:string">
+                                                                                <xs:attribute type="xs:string" name="source-id" use="optional"/>
+                                                                                <xs:attribute type="xs:string" name="target-id" use="optional"/>
+                                                                                <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                            </xs:extension>
+                                                                        </xs:simpleContent>
+                                                                    </xs:complexType>
+                                                                </xs:element>
+                                                            </xs:sequence>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="meta-attributes">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="meta-attribute">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:int" name="location-x" use="optional"/>
+                                                                    <xs:attribute type="xs:int" name="location-y" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="color-refs" minOccurs="0">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="color-ref" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:string" name="color-id" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="distribution-function" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                    <xs:attribute type="xs:int" name="initial-population" use="optional"/>
+                                                                    <xs:attribute type="xs:float" name="lambda" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="departure-discipline" use="optional"/>
+                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                    <xs:attribute type="xs:string" name="queue-ref" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="transitions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="transition" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="modes">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="mode">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:float" name="firing-weight" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="real-color" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="connections">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="connection" maxOccurs="unbounded" minOccurs="0">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:int" name="count" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="source-id" use="optional"/>
+                                                                    <xs:attribute type="xs:string" name="target-id" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                        <xs:element name="meta-attributes">
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="meta-attribute">
+                                                        <xs:complexType>
+                                                            <xs:simpleContent>
+                                                                <xs:extension base="xs:string">
+                                                                    <xs:attribute type="xs:int" name="location-x" use="optional"/>
+                                                                    <xs:attribute type="xs:int" name="location-y" use="optional"/>
+                                                                </xs:extension>
+                                                            </xs:simpleContent>
+                                                        </xs:complexType>
+                                                    </xs:element>
+                                                </xs:sequence>
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                    <xs:attribute type="xs:string" name="name" use="optional"/>
+                                    <xs:attribute type="xs:int" name="priority" use="optional"/>
+                                    <xs:attribute type="xs:float" name="weight" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="connections">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="connection" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute type="xs:string" name="id" use="optional"/>
+                                            <xs:attribute type="xs:string" name="source-id" use="optional"/>
+                                            <xs:attribute type="xs:string" name="target-id" use="optional"/>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="qpme-version"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
